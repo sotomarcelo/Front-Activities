@@ -36,4 +36,4 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - Responsive Page
 
 ## Author
-- Frontend Mentor - [@sotomarcelo](https://www.frontendmentor.io/profile/sotomarcelo)
+- Frontend Mentor - [@sotomarcelo](https://animated-sherbet-ffeafc.netlify.app)
