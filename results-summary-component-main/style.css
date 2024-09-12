@@ -8,22 +8,24 @@
 
 }
 
-body{
-    display: flex;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5; /* Fondo ligero para resaltar la tarjeta */
 }
+
 
 .card{
     display: flex;
     flex-direction: row;
     background-color: white;
     border-radius: 20px;
-    border-left: 0px;
-    border-top: 0px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 15px 15px 0px;
+    width: 750px;
+    height: 550px;
 }
 
 .main-card{
@@ -32,70 +34,84 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 250px;
+    width: 780px;
     text-align: center;
     border-radius: 20px;
     align-items: center;
-    padding: 30px;
-}
-
-
-.main-card h1{
-    margin-top: 20px;
-    font-size: 50px;
-
+    padding: 40px 60px 40px 60px;
 }
 
 #title{
+    font-size: 28px;
     line-height: 150%;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 500;
 }
 
-.main-card h2{
-    margin-bottom: 10px;
-    font-size: 20px;
-    line-height: 150%;
-    font-weight: 700;
-}
-
-.main-card h3{
-    font-size: 14px;
-    line-height: 150%;
-    font-weight: 300;
-}
-
-.main-result{
+.result-main-card{
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     background-image: linear-gradient(to bottom,  hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    width: 130px;
-    height: 130px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    padding: 20px;
 }
 
-.card-result-text{
+.big-result{
+    margin-top: 20px;
+    font-size: 70px;
+}
+
+.percentage-result{
+    opacity: 80%;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+.result{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.main-card p{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 300;
+}
+
+/*FROM HERE WE START WITH RIGHT DIV*/
+
+
+.card-summary {
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    width: 900px;
+    padding: 40px; 
+}
+
+.summary-title{
+    color: black;
+    font-size: 14px;
+
 }
 
 #cards{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     align-items: flex-start;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .card-score{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 240px;
-    height: 45px;
-    margin: 0px 30px 0px 30px;
+    width: 100%;
+    height: 55px;
     justify-content: space-between;
     border-radius: 5px;
 }
@@ -110,8 +126,8 @@ body{
     display: flex;
     flex-direction: row;
     color:  black;
-    margin-right: 10px;
-    font-size: 14px;
+    margin-right: 20px;
+    font-size: 18px;
 }
 
 #cards .card-score:nth-child(1) {
@@ -134,28 +150,96 @@ body{
     color: hsl(234, 85%, 45%);
 }
 
-button{
-    width: 240px;
-    height: 45px;
-    margin: 20px 30px 0px 30px;
-    border-radius: 20px;
-    background-color: black;
+.button{
+    width: 100%;
+    height: 55px;
+    border-radius: 25px;
+    background-color: hsl(224, 30%, 27%);
     color: white;
+    transition-duration: 0.4s;
+    cursor: pointer; 
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-.card-summary{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+
+.button:hover {
+    background-color: hsla(256, 72%, 46%, 1); /* 1 es completamente opaco */
 }
 
-.card-summary h1{
-    color: black;
 
-}
 
-.title{
-    margin-left: 30px;
-    margin-top: 25px;
+@media (max-width:375px){
+    body{
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .main-card{
+        width: 100%;
+        border-radius: 0px 0px 30px 30px;
+        gap: 15px;
+        padding: 20px 60px 40px 60px;
+    }
 
+    .cards{
+        width: 100%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 20px 40px 30px 40px;
+    }
+
+    #title {
+        font-size: 20px;
+        line-height: 150%;
+        font-weight: 500;
+    }
+
+    .result-main-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .big-result {
+        margin-top: 20px;
+        font-size: 50px;
+    }
+
+    .result {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .main-card p {
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 300;
+    }
+
+    .summary-title {
+        font-size: 10px;
+    }
 }

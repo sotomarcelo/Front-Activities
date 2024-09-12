@@ -11,31 +11,24 @@
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body>
-  <article class="card">
-    <article class="main-card">
+  <div class="card">
+    <div class="main-card">
       <h2 id="title">Your Result</h2>
-
-      <div class="main-result">
-        <h1>76</h1>
-        <h3>of 100</h3>
+      <div class="result-main-card">
+        <h1 class="big-result">76</h1>
+        <h3 class="percentage-result">of 100</h3>
       </div>
-
-      <div class="card-resutl-text">
-        <h2>Great</h2>
-        <h3>You scored higher than 65% of the people who have taken these tests.</h3>  
-      </div>
-    </article>
+      <div> <h2 class="result">Great</h2> </div>
+      <div> <p class="result-text">You scored higher than 65% of the people who have taken these tests.</p>  </div>
+    </div>
 
     <div class="card-summary">
-      <div class="title">
-        <h1>Summary</h1>
-      </div>
-  
+      <div class="summary-title"><h1>Summary</h1></div>
   
       <div id="cards">
       </div>
   
-      <button>Continue</button>
+      <button class="button">Continue</button>
     </div>
   
   
@@ -62,9 +55,6 @@
           })
           .catch(error => console.error('Error al cargar el JSON:', error));
     </script>
-  </article>
-
-
- 
+  </div>
 </body>
 </html>
