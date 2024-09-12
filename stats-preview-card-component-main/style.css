@@ -17,20 +17,23 @@ body{
 
 .main-container{
     display: flex;
-    height: 420px;
-    width: 1010px;
+    width: 75%;
+    height: 400px;
     font-family: "Lexend Deca", sans-serif;
 }
 
 .card-info{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: white;
-    padding: 50px 50px 100px 50px;
+    padding: 50px 50px 50px 50px;
     padding-right: 70px;
     background-color: hsl(244, 38%, 16%);
     gap: 20px;
     border-radius: 10px 0px 0px 10px;
+    min-width: 400px; /* Cambia el ancho mínimo a 200px para pantallas pequeñas */
+    max-width: 100%; /* Permite que el contenedor se reduzca a su tamaño mínimo */
 }
 
 .card-info span{
@@ -106,56 +109,42 @@ body{
     color: hsla(0, 0%, 100%, 0.6);
 }
 
-@media (max-width: 375px){
+@media (max-width: 375px) {
     body{
-        display: flex;
-        flex-direction: column-reverse;
-        height: 100vh;
-        background-color: hsl(233, 47%, 7%);
-        font-size: 15px;
+        height: 90vh;
     }
-
-    .main-container{
-        justify-content: center;
+    .main-container {
         display: flex;
         flex-direction: column-reverse;
-        width: 90%;
-        font-family: "Lexend Deca", sans-serif;
+        align-items: center;
+        width: 80%;
+        padding: 0;
+        justify-content: center;
     }
     
-    .card-info{
-        border-radius: 0px 0px 10px 10px;
+    .card-info {
         text-align: center;
         padding: 24px;
-    }
-
-    .card-info h1{
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 100%;
-        padding-top: 20px;
+        border-radius: 0 0 10px 10px;
+        min-width: 200px; /* Ajusta el ancho mínimo */
+        max-width: 100%; /* Asegura que no exceda el ancho disponible */
     }
     
-    .card-info h2{
-        font-family: "Inter", sans-serif;
-        font-size: 20px;
+    .card-info h1 {
+        font-size: 24px;
+        font-weight: 600;
     }
-    
-    .card-info h3{
-        font-size: 12px;
-    }
-
-
-    .card-info p{
-        font-family: "Lexend Deca", sans-serif;
-        font-weight: 200;
+    .card-info p {
+        font-size: 14px;
+        font-weight: 400;
         line-height: 150%;
-        font-size: 17px;
+
     }
 
-    .card-image{
-        border-radius: 10px 10px 0px 0px ;
-        height:60%;
+    .card-image {
+        border-radius: 10px 10px 0 0;
+        width: 100%; /* Asegura que se ajuste al ancho disponible */
+        height: 55%;
 
     }
 
@@ -163,29 +152,20 @@ body{
         border-radius: 10px 10px 0px 0px ;
         object-position: 0cm 0cm;
         object-fit: cover;
+        height: 100%;
     }
 
-    .boxes{
-        display: flex;
+    .boxes {
         flex-direction: column;
         padding: 15px;
         gap: 20px;
-
     }
 
-    .box{
-        gap: 4px;
+    .box h2 {
+        font-size: 22px;
     }
 
-    .box h2{
-        font-size: 24px;
-        font-family: "Inter", sans-serif;
-        font-weight: 700;
-    }
-
-    .box h3{
-        font-size: 14px;
-        font-family: "Lexend Deca", sans-serif;
-        font-weight: 300;
+    .box h3 {
+        font-size: 12px;
     }
 }
