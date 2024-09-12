@@ -127,15 +127,25 @@ button:hover{
 
 }
 
-/* Styles for Mobile (375px and smaller) */
-
-/* Styles for Desktop (1440px and larger) */
 @media (max-width: 1440px) {
     .container{
         width: 45vh;    
         height: 70vh;
 
 }
-/* Add additional styles for large screens */
+
 }
 
+@media (max-width: 375px) {
+
+    body{
+        background-image: url(images/pattern-background-mobile.svg); /* URL de la imagen de fondo */
+    }
+
+    .container{
+        width: 48vh;
+        height: 84vh;
+
+}
+
+}
